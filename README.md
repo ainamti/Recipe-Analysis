@@ -47,7 +47,7 @@ With this new dataframe, I generated a bar chart that compared the protein and c
   frameborder="0"
 ></iframe>
 
-
+![pivot table](pivot_table.jpg)
 
 ## Assessment of Missingness
 
