@@ -26,6 +26,20 @@ One of the columns in recipe_interact that i analyzed was the protein column. I 
   frameborder="0"
 ></iframe>
 
+I then created a new data frame only containing recipes with high protein and low carbohydrates by filtering recipes with the top 25% protein amount and the bottom 25% of carbohydrates. 
+
+```py
+high_protein_threshold = recipe_interact['protein'].quantile(0.75)  # Top 25% protein
+low_carb_threshold = recipe_interact['carbohydrates'].quantile(0.25)  # Bottom 25% carbs
+
+# Filter dataset for high-protein, low-carb recipes
+high_protein_low_carb = recipe_interact[(recipe_interact['protein'] >= high_protein_threshold) & (recipe_interact['carbohydrates'] <= low_carb_threshold)]
+
+high_protein_low_carb.head()
+```
+
+With this new dataframe, I generated a bar chart that compared the protein and carbohydrate amount between healthy (high protein, low carb) recipes and all recipes. I found that there was a noticeable difference in amount, especially with the protein column. 
+
 
 
 ## Assessment of Missingness
