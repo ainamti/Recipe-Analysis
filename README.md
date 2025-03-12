@@ -16,8 +16,13 @@ In order to analyze the nutritional information, I first created a helper functi
 ```py
 recipe_interact.head()
 ```
-
-![cleaned recipe_interact](recipe_interact.jpg)
+|    | name                                 |     id |   minutes |   sodium |   protein |   carbohydrates |
+|---:|:-------------------------------------|-------:|----------:|---------:|----------:|----------------:|
+|  0 | 1 brownies in the world    best ever | 333281 |        40 |        3 |         3 |               6 |
+|  1 | 1 in canada chocolate chip cookies   | 453467 |        45 |       22 |        13 |              26 |
+|  2 | 412 broccoli casserole               | 306168 |        40 |       32 |        22 |               3 |
+|  6 | millionaire pound cake               | 286009 |       120 |       13 |        20 |              39 |
+|  7 | 2000 meatloaf                        | 475785 |        90 |       12 |        29 |               2 |
 
 ### Visualizations
 One of the columns in recipe_interact that i analyzed was the protein column. I created a scatter plot to see the overall distribution of protein content of all the recipes given and saw that there were a number of recipes with a very high protein content. 
