@@ -47,7 +47,17 @@ With this new dataframe, I generated a bar chart that compared the protein and c
   frameborder="0"
 ></iframe>
 
-![pivot table](pivot_table.jpg)
+I created a pivot table to visualize the difference in nutrition means between healthy recipes and all recipes. It is clear that there is a big difference in protein means and and carbohydrate means, and an even bigger difference in the sugar amounts between the two types of recipes. This confirms that the recipes stored in the high protein low carb dataset are generally considered healthy even with the factors that I did not consider while filtering. 
+
+
+|               |   All Recipes (Mean) |   High-Protein, Low-Carb (Mean) |
+|:--------------|---------------------:|--------------------------------:|
+| protein       |              33.1334 |                         82.0507 |
+| carbohydrates |              13.7868 |                          2.0019 |
+| calories      |             429.927  |                        479.133  |
+| total_fat     |              32.6254 |                         46.3607 |
+| sugar         |              68.6644 |                         10.8307 |
+
 
 ## Assessment of Missingness
 
