@@ -40,6 +40,13 @@ high_protein_low_carb.head()
 
 With this new dataframe, I generated a bar chart that compared the protein and carbohydrate amount between healthy (high protein, low carb) recipes and all recipes. I found that there was a noticeable difference in amount, especially with the protein column. 
 
+<iframe
+  src="assets/protein_carb_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 ## Assessment of Missingness
