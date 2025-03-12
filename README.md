@@ -11,10 +11,7 @@ I left merged the recipe and interactions dataframes and filled the rating colum
 
 In order to analyze the nutritional information, I first created a helper function which converts a string into a list, since the nutrition column was formatted as a list but was of a string type. After changing the nutrition column's type, I created separate columns for each nutritional value (calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)). I then dropped any duplicate values that may have existed in the current dataframe. 
 
-```py
-print(recipe_interact.head().to_markdown(index=False))
-```
-[cleaned recipe_interact head](https://media-hosting.imagekit.io//aab4c04edb634df2/Screen Shot 2025-03-11 at 9.14.54 PM.png?Expires=1836361026&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=d-HCF9cFKk6rsgEorpXNKY-p~BIgusT-8wSEWkmWNreEGKHr9uK79FxS~S~LwzxAy~e4cydJ~4tk-lzjWpANRXPVC4BV2ChWLrVAFTnFe37AQBjA189ZUBlpbkgMf551d1I7K8zylFZHMf~9ojMWFoHqafyN~8CSG28ZdWcL7z~hedQ8Ac7a~b3Q1DGPnGqW6UteUz7NzDsNSeRBRC-OK~TZNECQ13z7oOwsTKpEbyT2qkcU6jcvpSNrG7QyME~59yPLOur4r8rOCs1flRrA-3he5Ih9UtLfBKZFMZj7wKimgDC91L4EAgV6zy9nKiFAktt9ervxHT54PBET7gPXiA__)
+![cleaned recipe_interact](recipe_interact.jpg)
 
 ## Assessment of Missingness
 
