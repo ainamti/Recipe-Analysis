@@ -11,6 +11,7 @@ I left merged the recipe and interactions dataframes and filled the rating colum
 
 In order to analyze the nutritional information, I first created a helper function which converts a string into a list, since the nutrition column was formatted as a list but was of a string type. After changing the nutrition column's type, I created separate columns for each nutritional value (calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)). I then dropped any duplicate values that may have existed in the current dataframe. 
 
+recipe_interact.head().to_markdown(index=False) 
 ## Assessment of Missingness
 
 
