@@ -17,6 +17,8 @@ recipe_interact.head()
 
 ![cleaned recipe_interact](recipe_interact.jpg)
 
+One of the columns in recipe_interact that i analyzed was the protein column. I created a scatter plot to see the overall distribution of protein content of all the recipes given and saw that there were a number of recipes with a very high protein content. 
+
 <iframe
   src="assets/protein_plot.html"
   width="800"
