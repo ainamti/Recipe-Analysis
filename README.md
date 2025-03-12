@@ -17,6 +17,13 @@ recipe_interact.head()
 
 ![cleaned recipe_interact](recipe_interact.jpg)
 
+<iframe
+  src="assets/protein_plot.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 ## Assessment of Missingness
