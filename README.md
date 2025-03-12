@@ -7,17 +7,16 @@ In this project I will be analyzing two dataframes: recipes and interactions. Re
 ## Data Cleaning and Exploratory Data Analysis
 
 ## Assessment of Missingness
-A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
+
 
 ## Hypothesis Testing
 
-TEXT 1
 
 ## Framing a Prediction Problem
 
-TEXT 2
 
 ## Baseline Model
+
 
 ## Final Model
 
