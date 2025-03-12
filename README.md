@@ -14,15 +14,15 @@ I left merged the recipe and interactions dataframes and filled the rating colum
 In order to analyze the nutritional information, I first created a helper function which converts a string into a list, since the nutrition column was formatted as a list but was of a string type. After changing the nutrition column's type, I created separate columns for each nutritional value (calories (#), total fat (PDV), sugar (PDV), sodium (PDV), protein (PDV), saturated fat (PDV), and carbohydrates (PDV)). I then dropped any duplicate values that may have existed in the current dataframe. 
 
 ```py
-recipe_interact.head()
+print(recipe_interact[['name', 'id', 'protein', 'carbohydrates']].head().to_markdown())
 ```
-|    | name                                 |     id |   minutes |   sodium |   protein |   carbohydrates |
-|---:|:-------------------------------------|-------:|----------:|---------:|----------:|----------------:|
-|  0 | 1 brownies in the world    best ever | 333281 |        40 |        3 |         3 |               6 |
-|  1 | 1 in canada chocolate chip cookies   | 453467 |        45 |       22 |        13 |              26 |
-|  2 | 412 broccoli casserole               | 306168 |        40 |       32 |        22 |               3 |
-|  6 | millionaire pound cake               | 286009 |       120 |       13 |        20 |              39 |
-|  7 | 2000 meatloaf                        | 475785 |        90 |       12 |        29 |               2 |
+|    | name                                 |     id |   protein |   carbohydrates |
+|---:|:-------------------------------------|-------:|----------:|----------------:|
+|  0 | 1 brownies in the world    best ever | 333281 |         3 |               6 |
+|  1 | 1 in canada chocolate chip cookies   | 453467 |        13 |              26 |
+|  2 | 412 broccoli casserole               | 306168 |        22 |               3 |
+|  6 | millionaire pound cake               | 286009 |        20 |              39 |
+|  7 | 2000 meatloaf                        | 475785 |        29 |               2 |
 
 ### Visualizations
 One of the columns in recipe_interact that i analyzed was the protein column. I created a scatter plot to see the overall distribution of protein content of all the recipes given and saw that there were a number of recipes with a very high protein content. 
@@ -68,6 +68,11 @@ I created a pivot table to visualize the difference in nutrition means between h
 
 
 ## Assessment of Missingness
+NMAR (Not Missing At Random) means the missing values are related to the missing data itself. The avg_rating column may be NMAR if there is no rating given for the actual recipe. The avg_rating column also may have some missing values due to the difficulty or popularity of the recipe, which would make the column MAR. I would like to look at the number of steps or preparation time and the popularity metrics (social media shares and views) to evaluate the difficulty and popularity of the recipe and see if there is a pattern with the missing data. 
+
+
+
+
 
 
 ## Hypothesis Testing
