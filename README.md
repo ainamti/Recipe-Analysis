@@ -4,18 +4,24 @@ Name: Ankita Inamti
 ## Introduction
 In this project I will be performing a hypothesis test to see if recipes with meat are healthier (higher protein, lower carbohydrates) than recipes without meat. I will also be implementing a regression model to predict the number of calories in a recipe
 
-## Sample Section
+## Data Cleaning and Exploratory Data Analysis
 
-## This'll be a _Helpful_ Section About the Greek Letter Θ!
+## Assessment of Missingness
 A heading containing characters not allowed in fragments, UTF-8 characters, two consecutive spaces between the first and second words, and formatting.
 
-## This heading is not unique in the file
+## Hypothesis Testing
 
 TEXT 1
 
-## This heading is not unique in the file
+## Framing a Prediction Problem
 
 TEXT 2
 
-# Links to the example headings above
+## Baseline Model
+
+## Final Model
+
+## Fairness Analysis
+
+
 
