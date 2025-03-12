@@ -16,6 +16,7 @@ In order to analyze the nutritional information, I first created a helper functi
 ```py
 print(recipe_interact[['name', 'id', 'protein', 'carbohydrates']].head().to_markdown())
 ```
+
 |    | name                                 |     id |   protein |   carbohydrates |
 |---:|:-------------------------------------|-------:|----------:|----------------:|
 |  0 | 1 brownies in the world    best ever | 333281 |         3 |               6 |
