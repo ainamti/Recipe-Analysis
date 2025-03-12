@@ -14,14 +14,7 @@ In order to analyze the nutritional information, I first created a helper functi
 ```py
 print(recipe_interact.head().to_markdown(index=False))
 ```
-|   calories |   total_fat |   sugar |   sodium |   protein |   saturated_fat |   carbohydrates |
-|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|
-|      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |
-|      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |
-|      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
-|      878.3 |          63 |     326 |       13 |        20 |             123 |              39 |
-|      267   |          30 |      12 |       12 |        29 |              48 |               2 |
-
+[cleaned recipe_interact head](https://media-hosting.imagekit.io//aab4c04edb634df2/Screen Shot 2025-03-11 at 9.14.54 PM.png?Expires=1836361026&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=d-HCF9cFKk6rsgEorpXNKY-p~BIgusT-8wSEWkmWNreEGKHr9uK79FxS~S~LwzxAy~e4cydJ~4tk-lzjWpANRXPVC4BV2ChWLrVAFTnFe37AQBjA189ZUBlpbkgMf551d1I7K8zylFZHMf~9ojMWFoHqafyN~8CSG28ZdWcL7z~hedQ8Ac7a~b3Q1DGPnGqW6UteUz7NzDsNSeRBRC-OK~TZNECQ13z7oOwsTKpEbyT2qkcU6jcvpSNrG7QyME~59yPLOur4r8rOCs1flRrA-3he5Ih9UtLfBKZFMZj7wKimgDC91L4EAgV6zy9nKiFAktt9ervxHT54PBET7gPXiA__)
 
 ## Assessment of Missingness
 
