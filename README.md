@@ -14,6 +14,15 @@ In order to analyze the nutritional information, I first created a helper functi
 ```py
 print(recipe_interact.head().to_markdown(index=False))
 ```
+|   calories |   total_fat |   sugar |   sodium |   protein |   saturated_fat |   carbohydrates |
+|-----------:|------------:|--------:|---------:|----------:|----------------:|----------------:|
+|      138.4 |          10 |      50 |        3 |         3 |              19 |               6 |
+|      595.1 |          46 |     211 |       22 |        13 |              51 |              26 |
+|      194.8 |          20 |       6 |       32 |        22 |              36 |               3 |
+|      878.3 |          63 |     326 |       13 |        20 |             123 |              39 |
+|      267   |          30 |      12 |       12 |        29 |              48 |               2 |
+
+
 ## Assessment of Missingness
 
 
