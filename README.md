@@ -17,6 +17,8 @@ recipe_interact.head()
 
 ![cleaned recipe_interact](recipe_interact.jpg)
 
+
+
 ## Assessment of Missingness
 
 
