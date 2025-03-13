@@ -91,9 +91,7 @@ This plot shows the empirical distribution of the test statistic for minutes.
   width="800"
   height="600"
   frameborder="0"
-></iframe>
-
-## Hypothesis Testing
+></iframe>## Hypothesis Testing
 I combined all the recipe names in the high protein low carb dataset and extracted the most common words. I found that a majority of the words were related to dishes containing meat. 
 
 <iframe
@@ -101,11 +99,12 @@ I combined all the recipe names in the high protein low carb dataset and extract
   width="800"
   height="600"
   frameborder="0"
-></iframe>
-So, my hypothesis test aims to explore whether recipes containing meat are healthier than vegetarian recipes. 
+></iframe>So, my hypothesis test aims to explore whether recipes containing meat are healthier than vegetarian recipes. 
 
 **Null Hypothesis:** Recipes containing meat are as healthy(high protein and low carbohydrates) than recipes without meat
+
 **Alternative Hypothesis:** Recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat
+
 **Test Statistic:** Healthiness Score: protein and carbohydrate ratio
 
 
