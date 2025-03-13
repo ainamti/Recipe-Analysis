@@ -71,6 +71,17 @@ I created a pivot table to visualize the difference in nutrition means between h
 ## Assessment of Missingness
 NMAR (Not Missing At Random) means the missing values are related to the missing data itself. The avg_rating column may be NMAR if there is no rating given for the actual recipe. The avg_rating column also may have some missing values due to the difficulty or popularity of the recipe, which would make the column MAR. I would like to look at the number of steps or preparation time and the popularity metrics (social media shares and views) to evaluate the difficulty and popularity of the recipe and see if there is a pattern with the missing data. 
 
+### Missingness Dependency
+
+I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 1 for the minutes column and a p-value of 0 for the date column. Since the p-value for the minutes permutation test is greater than 0.05, there is no significance and longer/shorter recipes have no link to the missingness of the avg_rating column. The p-value for the date permutation text is less than 0.05, so there is a significance and older/newer recipes are linked to the missingness of the avg_rating column. 
+
+<iframe
+  src="assets/permutation_test.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 
