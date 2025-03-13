@@ -75,6 +75,8 @@ NMAR (Not Missing At Random) means the missing values are related to the missing
 
 I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 0.047 for the minutes column and a p-value of 0.146 for the date column. Since the p-value for the minutes permutation test is less than 0.05, there is a significance and longer/shorter recipes are linked to the missingness of the avg_rating column. The p-value for the date permutation text is greater than 0.05, so there is no significance and older/newer recipes are not linked to the missingness of the avg_rating column. 
 
+This plot shows the distribution of the avg_rating column when the minutes column is missing and when it is not missing. 
+
 <iframe
   src="assets/dist_minutes.html"
   width="800"
@@ -82,6 +84,7 @@ I used the minutes column and the date column to analyze the dependency of missi
   frameborder="0"
 ></iframe> 
 
+This plot shows the empirical distribution of the test statistic for minutes.
 
 <iframe
   src="assets/empirical_dist_minutes.html"
