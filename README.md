@@ -34,7 +34,6 @@ One of the columns in recipe_interact that i analyzed was the protein column. I 
   height="600"
   frameborder="0"
 ></iframe>
-
 I then created a new data frame only containing recipes with high protein and low carbohydrates by filtering recipes with the top 25% protein amount and the bottom 25% of carbohydrates. 
 
 ```py
@@ -73,7 +72,9 @@ NMAR (Not Missing At Random) means the missing values are related to the missing
 
 ### Missingness Dependency
 
-I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 0.047 for the minutes column and a p-value of 0.146 for the date column. Since the p-value for the minutes permutation test is less than 0.05, there is a significance and longer/shorter recipes are linked to the missingness of the avg_rating column. The p-value for the date permutation text is greater than 0.05, so there is no significance and older/newer recipes are not linked to the missingness of the avg_rating column. 
+I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 0.047 for the minutes column and a p-value of 0.146 for the date column. 
+
+Since the p-value for the minutes permutation test is less than 0.05, there is a significance and longer/shorter recipes are linked to the missingness of the avg_rating column. The p-value for the date permutation text is greater than 0.05, so there is no significance and older/newer recipes are not linked to the missingness of the avg_rating column. 
 
 This plot shows the distribution of the avg_rating column when the minutes column is missing and when it is not missing. 
 
@@ -83,7 +84,6 @@ This plot shows the distribution of the avg_rating column when the minutes colum
   height="600"
   frameborder="0"
 ></iframe> 
-
 This plot shows the empirical distribution of the test statistic for minutes.
 
 <iframe
@@ -92,9 +92,16 @@ This plot shows the empirical distribution of the test statistic for minutes.
   height="600"
   frameborder="0"
 ></iframe>
-
-
 ## Hypothesis Testing
+I combined all the recipe names in the high protein low carb dataset and extracted the most common words. I found that a majority of the words were related to dishes containing meat. 
+
+<iframe
+  src="assets/most_common_words.html"
+  width="800"
+  height="600"
+  frameborder="0"
+></iframe>
+
 
 
 ## Framing a Prediction Problem
