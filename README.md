@@ -71,7 +71,6 @@ I created a pivot table to visualize the difference in nutrition means between h
 NMAR (Not Missing At Random) means the missing values are related to the missing data itself. The avg_rating column may be NMAR if there is no rating given for the actual recipe. The avg_rating column also may have some missing values due to the difficulty or popularity of the recipe, which would make the column MAR. I would like to look at the number of steps or preparation time and the popularity metrics (social media shares and views) to evaluate the difficulty and popularity of the recipe and see if there is a pattern with the missing data. 
 
 ### Missingness Dependency
-
 I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 0.047 for the minutes column and a p-value of 0.146 for the date column. 
 
 Since the p-value for the minutes permutation test is less than 0.05, there is a significance and longer/shorter recipes are linked to the missingness of the avg_rating column. The p-value for the date permutation text is greater than 0.05, so there is no significance and older/newer recipes are not linked to the missingness of the avg_rating column. 
@@ -148,12 +147,12 @@ non_meat_healthiness = non_meat_recipes['protein'] - non_meat_recipes['carbohydr
 difference_in_means = meat_healthiness.mean() - non_meat_healthiness.mean()
 
 ```
-
-
+I used this test statistic in my permutation test which combines the healthiness scores from both datasets, which gets repeatedly shuffled. The difference in means is calculated for each permuted group. The p-value uses the absolute value of the differences to perform a two tailed test and in this specific test I got a p-value of 0. Since the value is less than 0.05, there is a statistical signficane and we reject the null hypothesis. This means that there is evidence suggesting that recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat.
 
 
 ## Framing a Prediction Problem
-
+I will be predicting the number of calories in recipe which is a regression problem, since the value being predicted is a continuous numerical value. 
+At the time of prediction, the releavnt features that are known are the recipe name, ingredients, minutes, number of steps, number of ingredients, and all nutritional information. I will be using MSE (mean squared error) and RMSE (root mean squared error) as the evaluation metric. 
 
 ## Baseline Model
 
