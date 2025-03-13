@@ -102,7 +102,11 @@ I combined all the recipe names in the high protein low carb dataset and extract
   height="600"
   frameborder="0"
 ></iframe>
+So, my hypothesis test aims to explore whether recipes containing meat are healthier than vegetarian recipes. 
 
+**Null Hypothesis:** Recipes containing meat are as healthy(high protein and low carbohydrates) than recipes without meat
+**Alternative Hypothesis:** Recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat
+**Test Statistic:** Healthiness Score: protein and carbohydrate ratio
 
 
 ## Framing a Prediction Problem
