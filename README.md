@@ -149,15 +149,17 @@ difference_in_means = meat_healthiness.mean() - non_meat_healthiness.mean()
 ```
 I used this test statistic in my permutation test which combines the healthiness scores from both datasets, which gets repeatedly shuffled. The difference in means is calculated for each permuted group. The p-value uses the absolute value of the differences to perform a two tailed test and in this specific test I got a p-value of 0. Since the value is less than 0.05, there is a statistical signficane and we reject the null hypothesis. This means that there is evidence suggesting that recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat.
 
-
 ## Framing a Prediction Problem
 I will be predicting the number of calories in recipe which is a regression problem, since the value being predicted is a continuous numerical value. 
 At the time of prediction, the releavnt features that are known are the recipe name, ingredients, minutes, number of steps, number of ingredients, and all nutritional information. I will be using MSE (mean squared error) and RMSE (root mean squared error) as the evaluation metric. 
 
 ## Baseline Model
-
+In my baseline model, I am using the two features total_fat and sugar to predict the calories column. Total fat is quantitative and represents the amount of total fat in the recipe. Sugar is also a quantitative variable and represents the amount of sugar in the recipe. I used a linear regression model for my predictions and calculated the MSE and RMSE to evaluate the performance of my model. After implementing my baseline model I got an RMSE value of 196.17170158545017 and a MSE value of 38483.33650293091. Since these values are pretty big I would say that this model's performance isn't the best considering I have only used two features to predict the number of calories in a recipe, when there are more features that can be considered/ engineered to buid an accurate model.
 
 ## Final Model
+In my final model I have added two new features: fat_sugar_interaction and protein_carb_ratio. Fat_sugar_interaction was created by multiplying the total_fat and sugar columns and I implemented this feature because the fat and sugar amounts significantly affect the calorie density of a recipe. It is also reasonable to assume that recipes high in both fat and sugar tend to have a higher calorie count than recipes high in only one of these components. Protein_carb_ratio was created by by dividing the protein column by the carbohydrates column (with a small value added to the denominator to prevent division by zero). This feature is relevant to the calorie predicting model because a recipe with a high protein and low carb ratio can have a significant influence on the calorie amount of a recipe. 
+
+I used a RandomForestRegressor algorithm for my model, which is great for regression and builds decision trees and computes an an average of its predictions. I also used GridSearchCV, which finds hyperparameters that minimizes the neg_mean_squared_error. After implementing my final model I got an RMSE value of 89.02679605025783 and a MSE value of 7925.770414974202. The MSE and RMSE values were significantly lower in the final model compared to the baseline model which suggests that was a great improvement in the prediction accuracy of the recipe calories. 
 
 ## Fairness Analysis
 
