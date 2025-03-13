@@ -80,7 +80,8 @@ I used the minutes column and the date column to analyze the dependency of missi
   width="800"
   height="600"
   frameborder="0"
-></iframe> /
+></iframe> 
+
 
 <iframe
   src="assets/empirical_dist_minutes.html"
