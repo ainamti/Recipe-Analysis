@@ -105,7 +105,51 @@ I combined all the recipe names in the high protein low carb dataset and extract
 
 **Alternative Hypothesis:** Recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat
 
-**Test Statistic:** Healthiness Score: protein and carbohydrate ratio
+**Test Statistic:** Difference in group means (mean of healthiness metric of meat recipes and mean of healthiness metric of vegetarian recipes)
+
+I added a column named contains_meat filled with boolean values which determines whether a recipe contains meat or not. 
+
+```py
+meat_keywords = ["chicken", "beef", "pork", "fish", "shrimp", "bacon", "lamb", "turkey", "ham", "sausage", "steak", "duck"]
+
+# Convert ingredients column to lowercase for better matching
+recipe_interact['ingredients'] = recipe_interact['ingredients'].astype(str).str.lower()
+
+def contains_meat(ingredients):
+    return any(meat in ingredients for meat in meat_keywords)
+
+# Create 'contains_meat' column
+recipe_interact['contains_meat'] = recipe_interact['ingredients'].apply(contains_meat)
+
+recipe_interact[['name', 'contains_meat']].head()
+```
+
+| name                                 | contains_meat   |
+|:-------------------------------------|:----------------|
+| 1 brownies in the world    best ever | False           |
+| 1 in canada chocolate chip cookies   | False           |
+| 412 broccoli casserole               | True            |
+| millionaire pound cake               | False           |
+| 2000 meatloaf                        | True            |
+
+To set up the permutation test to calculate the p-value, I first calculated my test statistic which included the following setup:
+
+```py
+from scipy import stats
+# Separate recipes into meat and non-meat groups
+meat_recipes = recipe_interact[recipe_interact['contains_meat'] == True]
+non_meat_recipes = recipe_interact[recipe_interact['contains_meat'] == False]
+
+# Calculate healthiness metric
+meat_healthiness = meat_recipes['protein'] - meat_recipes['carbohydrates']
+non_meat_healthiness = non_meat_recipes['protein'] - non_meat_recipes['carbohydrates']
+
+# Calculate the difference in means (test statistic)
+difference_in_means = meat_healthiness.mean() - non_meat_healthiness.mean()
+
+```
+
+
 
 
 ## Framing a Prediction Problem
