@@ -1,4 +1,4 @@
-# Recipe and Ratings Analysis
+# Assesing the Healthiness of Recipes and Predicting its Calories
 Name: Ankita Inamti 
 
 ## Introduction
