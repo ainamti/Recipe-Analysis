@@ -162,6 +162,14 @@ In my final model I have added two new features: fat_sugar_interaction and prote
 I used a RandomForestRegressor algorithm for my model, which is great for regression and builds decision trees and computes an an average of its predictions. I also used GridSearchCV, which finds hyperparameters that minimizes the neg_mean_squared_error. After implementing my final model I got an RMSE value of 89.02679605025783 and a MSE value of 7925.770414974202. The MSE and RMSE values were significantly lower in the final model compared to the baseline model which suggests that was a great improvement in the prediction accuracy of the recipe calories. 
 
 ## Fairness Analysis
+In my fairness analysis I have chosen Group X to be recipes with high-fat (total fat above the median) and Group Y to be recipes with low-fat (total fat below the median) with the RMSE (root mean squared error) being the evaluation metric. 
+
+**Null Hyopthesis:** The model performs equally well for high-fat and low-fat recipes.
+**Alternative Hypothesis:** The model performs significantly worse for one of the groups.
+**Test Statistric:** Observed difference in RMSE
+**Significance Level:** 0.05
+
+After implementing the permutation test, I recieved a p-value of 1, which is greater than 0.05. This means that we fail to reject the null hypothesis and there is evidence that the model performs equally as well for high-fat and low-fat recipes. 
 
 
 
