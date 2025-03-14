@@ -26,7 +26,7 @@ print(recipe_interact[['name', 'id', 'protein', 'carbohydrates']].head().to_mark
 |  7 | 2000 meatloaf                        | 475785 |        29 |               2 |
 
 ### Visualizations
-One of the columns in recipe_interact that i analyzed was the protein column. I created a scatter plot to see the overall distribution of protein content of all the recipes given and saw that there were a number of recipes with a very high protein content. 
+One of the columns in recipe_interact that I analyzed was the protein column. I created a scatter plot to see the overall distribution of protein content of all the recipes given and saw that there were a number of recipes with a very high protein content. 
 
 <iframe
   src="assets/protein_plot.html"
@@ -68,7 +68,7 @@ I created a pivot table to visualize the difference in nutrition means between h
 
 
 ## Assessment of Missingness
-NMAR (Not Missing At Random) means the missing values are related to the missing data itself. The avg_rating column may be NMAR if there is no rating given for the actual recipe. The avg_rating column also may have some missing values due to the difficulty or popularity of the recipe, which would make the column MAR. I would like to look at the number of steps or preparation time and the popularity metrics (social media shares and views) to evaluate the difficulty and popularity of the recipe and see if there is a pattern with the missing data. 
+NMAR (Not Missing At Random) means that the missing values are related to the missing data itself. The avg_rating column may be NMAR if there is no rating given for the actual recipe. The avg_rating column also may have some missing values due to the difficulty or popularity of the recipe, which would make the column MAR (Missing at Random). I would like to look at the number of steps or preparation time and the popularity metrics (social media shares and views) to evaluate the difficulty and popularity of the recipe and see if there is a pattern with the missing data. 
 
 ### Missingness Dependency
 I used the minutes column and the date column to analyze the dependency of missingness on the avg_recipe column. If a recipe takes a long time to complete or is published a long time ago that may explain why a recipe is missing a rating. I conducted permutation tests for both columns and recieved a p-value of 0.047 for the minutes column and a p-value of 0.146 for the date column. 
@@ -100,9 +100,9 @@ I combined all the recipe names in the high protein low carb dataset and extract
   frameborder="0"
 ></iframe>So, my hypothesis test aims to explore whether recipes containing meat are healthier than vegetarian recipes. 
 
-**Null Hypothesis:** Recipes containing meat are as healthy(high protein and low carbohydrates) than recipes without meat
+**Null Hypothesis:** Recipes containing meat are as healthy(high protein and low carbohydrates) as recipes without meat.
 
-**Alternative Hypothesis:** Recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat
+**Alternative Hypothesis:** Recipes containing meat are healthier(high protein and low carbohydrates) than recipes without meat.
 
 **Test Statistic:** Difference in group means (mean of healthiness metric of meat recipes and mean of healthiness metric of vegetarian recipes)
 
@@ -154,7 +154,7 @@ I will be predicting the number of calories in recipe which is a regression prob
 At the time of prediction, the relevant features that are known are the recipe name, ingredients, minutes, number of steps, number of ingredients, and all nutritional information. I will be using MSE (mean squared error) and RMSE (root mean squared error) as the evaluation metric. 
 
 ## Baseline Model
-In my baseline model, I am using the two features total_fat and sugar to predict the calories column. Total fat is quantitative and represents the amount of total fat in the recipe. Sugar is also a quantitative variable and represents the amount of sugar in the recipe. I used a linear regression model for my predictions and calculated the MSE and RMSE to evaluate the performance of my model. After implementing my baseline model I got an RMSE value of 196.17170158545017 and a MSE value of 38483.33650293091. Since these values are pretty big I would say that this model's performance isn't the best considering I have only used two features to predict the number of calories in a recipe, when there are more features that can be considered/ engineered to buid an accurate model.
+In my baseline model, I am using the two features total_fat and sugar to predict the calories column. Total fat is quantitative and represents the amount of total fat in the recipe. Sugar is also a quantitative variable and represents the amount of sugar in the recipe. I used a linear regression model for my predictions and calculated the MSE and RMSE to evaluate the performance of my model. After implementing my baseline model I got an RMSE value of 196.17170158545017 and a MSE value of 38483.33650293091. Since these values are pretty big I would say that this model's performance isn't the best considering I have only used two features to predict the number of calories in a recipe, when there are more features that can be considered/engineered to buid an accurate model.
 
 ## Final Model
 In my final model I have added two new features: fat_sugar_interaction and protein_carb_ratio. Fat_sugar_interaction was created by multiplying the total_fat and sugar columns and I implemented this feature because the fat and sugar amounts significantly affect the calorie density of a recipe. It is also reasonable to assume that recipes high in both fat and sugar tend to have a higher calorie count than recipes high in only one of these components. Protein_carb_ratio was created by by dividing the protein column by the carbohydrates column (with a small value added to the denominator to prevent division by zero). This feature is relevant to the calorie predicting model because a recipe with a high protein and low carb ratio can have a significant influence on the calorie amount of a recipe. 
