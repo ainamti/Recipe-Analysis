@@ -1,4 +1,4 @@
-# Recipe Analysis Final Project
+# Recipe and Ratings Analysis
 Name: Ankita Inamti 
 
 ## Introduction
