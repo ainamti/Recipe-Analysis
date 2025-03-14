@@ -151,7 +151,7 @@ I used this test statistic in my permutation test which combines the healthiness
 
 ## Framing a Prediction Problem
 I will be predicting the number of calories in recipe which is a regression problem, since the value being predicted is a continuous numerical value. 
-At the time of prediction, the relevant features that are known are the recipe name, ingredients, minutes, number of steps, number of ingredients, and all nutritional information. I will be using MSE (mean squared error) and RMSE (root mean squared error) as the evaluation metric. 
+At the time of prediction, the relevant features that are known are the recipe name, ingredients, minutes, number of steps, number of ingredients, and all nutritional information. I will be using MSE (mean squared error) and RMSE (root mean squared error) as the evaluation metric because they represent the model's prediction error in units of calories, which will help in determining the accuracy of my models. 
 
 ## Baseline Model
 In my baseline model, I am using the two features total_fat and sugar to predict the calories column. Total fat is quantitative and represents the amount of total fat in the recipe. Sugar is also a quantitative variable and represents the amount of sugar in the recipe. I used a linear regression model for my predictions and calculated the MSE and RMSE to evaluate the performance of my model. After implementing my baseline model I got an RMSE value of 196.17170158545017 and a MSE value of 38483.33650293091. Since these values are pretty big I would say that this model's performance isn't the best considering I have only used two features to predict the number of calories in a recipe, when there are more features that can be considered/engineered to buid an accurate model.
