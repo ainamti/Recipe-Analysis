@@ -1,5 +1,5 @@
 # Assesing the Healthiness of Recipes and Predicting its Calories
-Name: Ankita Inamti 
+**Name:** Ankita Inamti 
 
 ## Introduction
 In this project I will be analyzing two dataframes: recipes and interactions. Recipes contains 83782 rows and a few relevant columns include the recipe name and id, nutrition information, the number of steps in the recipe, the text for recipe steps, and the user provided description. Interactions contains 731927 rows and the columns include the user and recipe id, date of interaction, and the rating and review of the recipe. 
