@@ -165,8 +165,11 @@ I used a RandomForestRegressor algorithm for my model, which is great for regres
 In my fairness analysis I have chosen Group X to be recipes with high-fat (total fat above the median) and Group Y to be recipes with low-fat (total fat below the median) with the RMSE (root mean squared error) being the evaluation metric. 
 
 **Null Hyopthesis:** The model performs equally well for high-fat and low-fat recipes.
+
 **Alternative Hypothesis:** The model performs significantly worse for one of the groups.
+
 **Test Statistric:** Observed difference in RMSE
+
 **Significance Level:** 0.05
 
 After implementing the permutation test, I recieved a p-value of 1, which is greater than 0.05. This means that we fail to reject the null hypothesis and there is evidence that the model performs equally as well for high-fat and low-fat recipes. 
